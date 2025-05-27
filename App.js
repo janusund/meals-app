@@ -11,6 +11,109 @@ import {Ionicons} from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 
+// const Stack= createStackNavigator();
+// const Drawer= createDrawerNavigator();
+// const BottomTab = createBottomTabNavigator();
+
+// /*
+// Drawer
+//  └── Tabs
+//       ├── Categories (Stack)
+//       └── Favorites (Stack)
+//           └── MealDetail (Stack)
+// */
+// function CategoriesStackNavigator() {
+//   return (
+//     <Stack.Navigator screenOptions={{
+//       headerStyle: { backgroundColor: '#351401' },
+//       headerTintColor: 'white',
+//       contentStyle: { backgroundColor: '#3f2f25' },
+//     }}>
+//       <Stack.Screen name="Categories" component={CategoriesScreen} options={{ headerShown: false}}/>
+//       <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} options={{ headerShown: false}}/>
+//       <Stack.Screen name="MealDetail" component={MealDetailScreen}  />
+//     </Stack.Navigator>
+//   );
+// }
+
+
+// function FavoritesStackNavigator() {
+//   return (
+//     <Stack.Navigator screenOptions={{
+//       headerStyle: { backgroundColor: '#351401' },
+//       headerTintColor: 'white',
+//       contentStyle: { backgroundColor: '#3f2f25' },
+//     }}>
+//       <Stack.Screen name="Favorites" component={FavoritesScreen}    options={{
+//             headerShown: false}}/>
+//       <Stack.Screen name="MealDetail" component={MealDetailScreen} options={{ title: 'About the Meal!' ,headerShown: false}} />
+//     </Stack.Navigator>
+//   );
+// }
+
+// function BottomTabsNavigator() {
+//   return (
+//     <BottomTab.Navigator screenOptions={{
+//       headerStyle: { backgroundColor: '#3c0a6b' },
+//       headerTintColor: 'white',
+//       tabBarActiveTintColor: '#3c0a6b',
+//       tabBarActiveBackgroundColor: '#f0e1ff',
+//     }}>
+//       <BottomTab.Screen
+//         name="CategoriesTab"
+//         component={CategoriesStackNavigator}
+//         options={{
+//             headerShown: false ,
+//           title: "Categories",
+//           tabBarIcon: ({ color, size }) => <Ionicons name="list" color={color} size={size} />
+//         }}
+//       />
+//       <BottomTab.Screen
+//         name="FavoritesTab"
+//         component={FavoritesStackNavigator}
+//         options={{
+//           headerShown: false ,
+//           title: "Favorites",
+//           tabBarIcon: ({ color, size }) => <Ionicons name="star" color={color} size={size} />
+//         }}
+//       />
+//     </BottomTab.Navigator>
+//   );
+// }
+
+// function DrawerNavigator() {
+//   return (
+//     <Drawer.Navigator screenOptions={{
+//       headerStyle: { backgroundColor: '#351401' },
+//       headerTintColor: 'white',
+//       drawerContentStyle: { backgroundColor: '#351401' },
+//       drawerInactiveTintColor: 'white',
+//       drawerActiveBackgroundColor: '#e4baa1',
+//     }}>
+//       <Drawer.Screen
+//         name="Meals"
+//         component={BottomTabsNavigator}
+//         options={{          
+//           drawerLabel: 'All Meals',
+//           drawerIcon: ({ color, size }) => <Ionicons name="restaurant" color={color} size={size} />
+//         }}
+//       />
+//     </Drawer.Navigator>
+//   );
+// }
+// export default function App() {
+//   return (
+//     <>
+//       <StatusBar style="light" />
+//       <NavigationContainer>
+//         <DrawerNavigator />
+//       </NavigationContainer>
+//     </>
+//   );
+// }
+
+
+
 const Stack= createStackNavigator();
 const Drawer= createDrawerNavigator();
 const BottomTab = createBottomTabNavigator();
