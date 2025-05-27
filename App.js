@@ -1,20 +1,62 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import CategoriesScreen from './screens/CategoriesScreen';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import MealsOverviewScreen from './screens/MealsOverviewScreen';
+import MealDetailScreen from './screens/MealDetailScreen';
 
+
+const Stack= createStackNavigator();
+const Drawer= createDrawerNavigator();
+
+function DrawerNavigator(){
+  // Holds drawer navigation 
+  return 
+}
+// Initial Component - default Screen unless defined in initialroutename
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <StatusBar style="light" />
+      <NavigationContainer>
+        <Stack.Navigator
+          initialRouteName="MealsCategories"
+          screenOptions={{
+            headerStyle: { backgroundColor: "#351401" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#3f2f25" },
+          }}
+        >
+          <Stack.Screen
+            name="MealsCategories"
+            component={CategoriesScreen}
+            options={{
+              title: "All Categories",
+            }}
+          />
+          <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} 
+          // Approach to pass title to the screen
+          // options={({route, navigation})=>{
+          //    const catId = route.params.categoryId;
+          //   return {
+          //       title: catId
+          //   };
+          // }} 
+          />
+          <Stack.Screen name="MealDetail" component={MealDetailScreen}
+          // Movign this to the screen
+          // options={{
+          //   headerRight:()=>{  return <Button title ='Tap Me!' onPress={} />}
+          // }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  
 });
