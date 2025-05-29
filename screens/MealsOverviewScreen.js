@@ -1,7 +1,7 @@
-import MealItem from "../components/MealItem";
 import { CATEGORIES, MEALS } from "../data/dummy-data";
 import {Text, View, StyleSheet,FlatList} from 'react-native'; 
 import { useLayoutEffect } from "react";
+import MealsList from "../components/MealsList/MealsList";
 // Instead of passing parameter route as part of Obejct Destructuring to extract data being passed can use
 // This is useful if the nexted componet is not registered as a Stack.Screen
 // import { useRoute} from '@react-navifation/native';
@@ -27,26 +27,10 @@ function MealsOverviewScreen({route, navigation}){
       });
     }, [catId, navigation]);
    
-
-    function renderMealItem(itemData){
-        return (
-           <MealItem itemMeal={itemData.item} />
-        )
-    }
-    return(
-        <View style={styles.container}>
-           <FlatList data ={displayedMeals} keyExtractor={(item)=> item.id}
-            renderItem={renderMealItem}/>
-        </View>
-    );
+    return <MealsList items={displayedMeals}/>
+   
 
 }
 
 export default MealsOverviewScreen;
 
-const styles= StyleSheet.create({
-    container:{
-        flex:1,
-        padding:16
-    }
-});

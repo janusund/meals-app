@@ -1,16 +1,29 @@
 import { View , Image, Text, StyleSheet,ScrollView, Button} from "react-native";
+import { useLayoutEffect, useContext } from "react";
 import { MEALS } from "../data/dummy-data";
 import MealDetails from "../components/MealDetails";
 import SubTitles from "../components/SubTitles";
 import List from "../components/List";
-import { useLayoutEffect } from "react";
+import { FavoritesContext } from "../store/context/favorite-context";
+import { AuthContext } from "../store/context/auth-context";
 import IconButton from "../components/IconButton";
+//import {useSelector} from 'react-redux';
 
 function MealDetailScreen({route,navigation}){
     const mealId = route.params.mealId;
     const selectedMeal = MEALS.find((item)=> item.id == mealId);
 
-    function headerButtonPressHandler(){
+    const favoriteMealCtx= useContext(FavoritesContext);
+    const isMealsFavorite = favoriteMealCtx.ids.includes(mealId);
+
+   // const authCtx = useContext(AuthContext);
+
+    function changeFavoriteMealPressHandler(){
+      if(isMealsFavorite){
+        favoriteMealCtx.removeFavorite(mealId);
+      }else{
+        favoriteMealCtx.addFavorite(mealId);
+      }
 
     }
     // This side effect needs to be done within useEffect
@@ -19,9 +32,12 @@ function MealDetailScreen({route,navigation}){
     useLayoutEffect(() => {       
         navigation.setOptions({
         title: selectedMeal.title,
-        headerRight:()=>{  return <IconButton onPress={headerButtonPressHandler} icon="star" color="white"/>}
+        headerRight:()=>{  return <IconButton onPress={changeFavoriteMealPressHandler} icon={
+          isMealsFavorite ?'star':'star-outline'
+        } color="white"
+          />}
         });
-    }, [selectedMeal, navigation,headerButtonPressHandler]);
+    }, [selectedMeal, navigation,changeFavoriteMealPressHandler]);
     return (
       <ScrollView style ={styles.root}>
         <Image source={{ uri: selectedMeal.imageUrl }} style={styles.image} />

@@ -18,7 +18,18 @@ A simple React Native app to demonstrate use of Navigation for a Meals App<br/>
     <li>Demonstrates usage of useEffectLayout for updates to options of the screen for example title , button etc. </li>
     <li>Demonstrates use of Bottom Tabs Navigation used for both Android and IOS versus Materials Tabs and install <br/>
     npm install @react-navigation/bottom-tabs<br/></li>
-    <li>Demonstrates use of nested Navigation with combination of Navigators <br/></li>
+    <li>Demonstrates use of nested Navigation with combination of Navigators <br/>
+            Navigation Flow
+        Drawer
+        └── Tabs
+            ├── Categories (Stack)
+            └── Favorites (Stack)
+                └── MealDetail (Stack)
+     </li>
+    <li>Demonstrates manage app wide state for managing Favorites using Context API</li>
+    <li>Demonstrates using Redux for state management with <a href="https://redux-toolkit.js.org/">Redux</a> <br/>
+    npm install @reduxjs/toolkit <br/>
+    </li>
 </ul>
 
 ## Tech Stack<br/>
@@ -40,6 +51,8 @@ Note: You’ll need Node.js, Expo CLI, and a mobile simulator or Expo Go app.<br
 /screens         # Screen layouts for Meals Overview <br/>
 
 /data            # Static data points <br/>
+
+/store           # For State Management <br/>
 
 /models          # Models for Meal and Category <br/>
 
