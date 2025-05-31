@@ -9,12 +9,10 @@ import MealDetailScreen from './screens/MealDetailScreen';
 import FavoritesScreen from './screens/FavoritesScreen';
 import {Ionicons} from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import FavoritesContextProvider from './store/context/favorite-context';
 import UserScreen from './screens/UserScreen';
 import IconButton from "./components/IconButton";
-import AuthContextProvider from './store/context/auth-context';
-//import {Provider} from 'react-redux';
-//import {store} from   './store/context/store';
+import {Provider} from 'react-redux';
+import {store} from   './store/redux/store';
 
 
 
@@ -50,9 +48,7 @@ function DrawerNavigator(){
 // Initial Component - default Screen unless defined in initialroutename
 export default function App() {
   return (
-    <AuthContextProvider>
-    <FavoritesContextProvider> 
-   
+     <Provider store ={store}>
       <StatusBar style="light" />
      
       <NavigationContainer>
@@ -71,29 +67,16 @@ export default function App() {
           />
          
           <Stack.Screen name="MealsOverview" component={MealsOverviewScreen} 
-          // Approach to pass title to the screen
-          // options={({route, navigation})=>{
-          //    const catId = route.params.categoryId;
-          //   return {
-          //       title: catId
-          //   };
-          // }} 
           />
           <Stack.Screen name="MealDetail" component={MealDetailScreen}
           options={{
               title: "About the Meal!",
           }}
-          // Movign this to the screen
-          // options={{
-          //   headerRight:()=>{  return <Button title ='Tap Me!' onPress={} />}
-          // }}
           />
          
         </Stack.Navigator>
       </NavigationContainer>
-      
-       </FavoritesContextProvider>
-        </AuthContextProvider> 
+      </Provider>
   );
 }
 

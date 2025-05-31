@@ -32,6 +32,23 @@ A simple React Native app to demonstrate use of Navigation for a Meals App<br/>
     </li>
 </ul>
 
+
+## ScreenShots<br/>
+Meal Categories Screen Landing <br/> 
+<p align="left"> <img src="./assets/screenshots/MealCategoriesScreen.jpg" /> </p> 
+
+Meals Ovewview Screen <br/>
+<p align="left"> <img src="./assets/screenshots/MealsOverviewScreen.jpg" /> </p> 
+
+Meals Detail Screen <br/>
+<p align="left"> <img src="./assets/screenshots/MealDetailsScreen.jpg" /> </p> 
+
+Navigation Screen <br/>
+<p align="left"> <img src="./assets/screenshots/DrawerNavigationScreen.jpg" /> </p> 
+
+Favorites Screen <br/>
+<p align="left"> <img src="./assets/screenshots/FavoritesScreen.jpg" /> </p> 
+
 ## Tech Stack<br/>
 React Native<br/>
 

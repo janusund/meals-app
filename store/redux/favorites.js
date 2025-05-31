@@ -16,7 +16,7 @@ const favoritesSlice = createSlice({
     }
 
 });
-
+// Methods are not called manually but dispatched using the export below
 export const addFavorite = favoritesSlice.actions.addFavorites;
 export const removeFavorite = favoritesSlice.actions.removeFavorites;
 export default favoritesSlice.reducer;
