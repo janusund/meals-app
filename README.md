@@ -35,19 +35,19 @@ A simple React Native app to demonstrate use of Navigation for a Meals App<br/>
 
 ## ScreenShots<br/>
 Meal Categories Screen Landing <br/> 
-<p align="left"> <img src="./assets/screenshots/MealCategoriesScreen.jpg" /> </p> 
+<p align="left"> <img src="./assets/screenshots/MealCategoriesScreen.jpg" width="50" height="50" /> </p> 
 
-Meals Ovewview Screen <br/>
-<p align="left"> <img src="./assets/screenshots/MealsOverviewScreen.jpg" /> </p> 
+Meal Item Screen <br/>
+<p align="left"> <img src="./assets/screenshots/MealItemScreen.jpg" width="50" height="50" /> </p> 
 
-Meals Detail Screen <br/>
-<p align="left"> <img src="./assets/screenshots/MealDetailsScreen.jpg" /> </p> 
+Meal Detail Screen <br/>
+<p align="left"> <img src="./assets/screenshots/MealDetailsScreen.jpg" width="50" height="50" /> </p> 
 
 Navigation Screen <br/>
-<p align="left"> <img src="./assets/screenshots/DrawerNavigationScreen.jpg" /> </p> 
+<p align="left"> <img src="./assets/screenshots/DrawerNavigationScreen.jpg" width="50" height="50" /> </p> 
 
 Favorites Screen <br/>
-<p align="left"> <img src="./assets/screenshots/FavoritesScreen.jpg" /> </p> 
+<p align="left"> <img src="./assets/screenshots/FavoritesScreen.jpg" width="50" height="50" /> </p> 
 
 ## Tech Stack<br/>
 React Native<br/>
