@@ -1,75 +1,77 @@
-## Simple Meals App App<br/>
-A simple React Native app to demonstrate use of Navigation for a Meals App<br/>
+## 🍽️ Simple Meals App
 
+A simple React Native app demonstrating navigation patterns such as Stack, Drawer, and Bottom Tabs, along with state management using Context API and Redux Toolkit.
 
-## Features<br/>
-<ul>
-    <li>Demonstrates use of navigation <a href="https://reactnavigation.org/docs/getting-started">React navigation</a></li>
-    <li>Installed Navigation package with <br/>
-    npm install @react-navigation/native<br/>
-    npx expo install react-native-screens react-native-safe-area-context<br/>
-</li>
-    <li>Demonstrates use of Stack navigators listed under <a href="https://reactnavigation.org/docs/stack-navigator">Navigators</a> using 
-    npm install @react-navigation/stack</li>
-    <li>Demonstrates use of Drawer navigators listed under <a href="https://reactnavigation.org/docs/drawer-navigator">Navigators</a> using 
-    npm install @react-navigation/drawer<br/>
-    npx expo install react-native-gesture-handler react-native-reanimated</li>
-    <li>Demonstartes use of button on the Header on a screen</li>
-    <li>Demonstrates usage of useEffectLayout for updates to options of the screen for example title , button etc. </li>
-    <li>Demonstrates use of Bottom Tabs Navigation used for both Android and IOS versus Materials Tabs and install <br/>
-    npm install @react-navigation/bottom-tabs<br/></li>
-    <li>Demonstrates use of nested Navigation with combination of Navigators <br/>
-            Navigation Flow
-        Drawer
-        └── Tabs
-            ├── Categories (Stack)
-            └── Favorites (Stack)
-                └── MealDetail (Stack)
-     </li>
-    <li>Demonstrates manage app wide state for managing Favorites using Context API</li>
-    <li>Demonstrates using Redux for state management with <a href="https://redux-toolkit.js.org/">Redux</a> <br/>
-    npm install @reduxjs/toolkit <br/>
-    </li>
-</ul>
+---
 
+## 🚀 Features
 
-## ScreenShots<br/>
-Meal Categories Screen Landing <br/> 
-<p align="left"> <img src="./assets/screenshots/MealCategoriesScreen.jpg" width="50" height="50" /> </p> 
+* ✅ Demonstrates navigation using [React Navigation](https://reactnavigation.org/docs/getting-started)
+* ✅ Stack Navigator ([docs](https://reactnavigation.org/docs/stack-navigator))
+  `npm install @react-navigation/stack`
+* ✅ Drawer Navigator ([docs](https://reactnavigation.org/docs/drawer-navigator))
+  `npm install @react-navigation/drawer`
+  `npx expo install react-native-gesture-handler react-native-reanimated`
+* ✅ Bottom Tabs Navigation (cross-platform)
+  `npm install @react-navigation/bottom-tabs`
+* ✅ Header buttons and `useLayoutEffect` for screen options (like title, header buttons)
+* ✅ Nested navigation structure:
 
-Meal Item Screen <br/>
-<p align="left"> <img src="./assets/screenshots/MealItemScreen.jpg" width="50" height="50" /> </p> 
+  ```
+  Drawer
+  └── Tabs
+      ├── Categories (Stack)
+      └── Favorites (Stack)
+          └── MealDetail (Stack)
+  ```
+* ✅ App-wide favorites state using Context API
+* ✅ Redux-based state management using [Redux Toolkit](https://redux-toolkit.js.org/)
+  `npm install @reduxjs/toolkit`
 
-Meal Detail Screen <br/>
-<p align="left"> <img src="./assets/screenshots/MealDetailsScreen.jpg" width="50" height="50" /> </p> 
+---
 
-Navigation Screen <br/>
-<p align="left"> <img src="./assets/screenshots/DrawerNavigationScreen.jpg" width="50" height="50" /> </p> 
+## 🖼️ Screenshots
 
-Favorites Screen <br/>
-<p align="left"> <img src="./assets/screenshots/FavoritesScreen.jpg" width="50" height="50" /> </p> 
+| Screen            | Preview                                              |
+| ----------------- | ---------------------------------------------------- |
+| Meal Categories   | ![](./assets/screenshots/MealCategoriesScreen.jpg)   |
+| Meal Item         | ![](./assets/screenshots/MealItemScreen.jpg)         |
+| Meal Detail       | ![](./assets/screenshots/MealDetailsScreen.jpg)      |
+| Navigation Drawer | ![](./assets/screenshots/DrawerNavigationScreen.jpg) |
+| Favorites         | ![](./assets/screenshots/FavoritesScreen.jpg)        |
 
-## Tech Stack<br/>
-React Native<br/>
+---
 
-## Installation<br/>
-git clone this repo<br/>
-cd authenticator-appr<br/>
-npm install<br/>
-npm start<br/>
-Note: You’ll need Node.js, Expo CLI, and a mobile simulator or Expo Go app.<br/>
+## 🛠️ Tech Stack
 
-## Project Structure <br/>
+* React Native
+* Expo
+* React Navigation
+* Redux Toolkit
+* Context API
 
-/components      # Reusable UI components <br/>
- 
-/App.js          # Entry point  <br/>
+---
 
-/screens         # Screen layouts for Meals Overview <br/>
+## 📦 Installation
 
-/data            # Static data points <br/>
+```bash
+git clone <repo-url>
+cd simple-meals-app
+npm install
+npm start
+```
 
-/store           # For State Management <br/>
+> 📱 **Note**: You’ll need [Node.js](https://nodejs.org/), [Expo CLI](https://docs.expo.dev/get-started/installation/), and a mobile simulator or the [Expo Go app](https://expo.dev/client).
 
-/models          # Models for Meal and Category <br/>
+---
 
+## 📁 Project Structure
+
+```
+/components     # Reusable UI components
+/screens        # Screens like Categories, Meals, Favorites
+/data           # Static data
+/store          # Redux store and slices
+/models         # Data models (Meal, Category)
+/App.js         # App entry point
+```
