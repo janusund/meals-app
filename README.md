@@ -30,16 +30,6 @@ A simple React Native app demonstrating navigation patterns such as Stack, Drawe
 
 ---
 
-## 🖼️ Screenshots
-
-| Screen            | Preview                                              |
-| ----------------- | ---------------------------------------------------- |
-| Meal Categories   | ![](./assets/screenshots/MealCategoriesScreen.jpg)   |
-| Meal Item         | ![](./assets/screenshots/MealItemScreen.jpg)         |
-| Meal Detail       | ![](./assets/screenshots/MealDetailsScreen.jpg)      |
-| Navigation Drawer | ![](./assets/screenshots/DrawerNavigationScreen.jpg) |
-| Favorites         | ![](./assets/screenshots/FavoritesScreen.jpg)        |
-
 ---
 
 ## 🛠️ Tech Stack
